@@ -1,1 +1,151 @@
-Demo
+# Author:https://github.com/Repcz
+# TG:https://t.me/QVQ_Channel
+# 以 ';' 或 '#' 或 '//' 开头的配置文件行为注释行
+# Loon Version ≥ 3.2.3
+# 最后更新时间: 2025-09-05 19:30
+# ================
+
+[General]
+disable-stun = true
+resource-parser = https://git.repcz.link/raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
+# IP 模式: ipv4-only / dual / ipv4-preferred / ipv6-preferred
+ip-mode = v4-only
+# DNS 服务，system 表示系统自带 DNS 服务器
+dns-server = 223.5.5.5,119.29.29.29
+allow-wifi-access = false
+wifi-access-http-port = 7222
+wifi-access-socks5-port = 7221
+# 节点延迟测试
+proxy-test-url = http://1.1.1.1/generate_204
+# 互联网联通性测试
+internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
+# 策略切换时关闭连接
+disconnect-on-policy-change = false
+# 默认节点超时时间（秒）
+test-timeout = 5
+# 域名拦截行为
+domain-reject-mode = DNS
+# DNS 拒绝行为
+dns-reject-mode = LoopbackIP
+# SNI 辅助规则匹配
+sni-sniffing = true
+# UDP 回落策略
+udp-fallback-mode = REJECT
+# 网络接口
+interface-mode = auto
+# 自定义 GeoIP 数据库
+geoip-url = https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb
+# 自定义 ASN 数据库
+ipasn-url = https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb
+
+[Proxy]
+
+
+[Remote Proxy]
+
+
+[Remote Filter]
+All = NameRegex, FilterKey = "."
+Hong Kong = NameRegex, FilterKey = "(🇭🇰)|(香港)|(Hong)|(HK)"
+United States = NameRegex, FilterKey = "(🇺🇸)|(美国)|(United States)|(US)"
+Taiwan = NameRegex, FilterKey = "(🇨🇳)|(台湾)|(Taiwan)|(TW)"
+Singapore = NameRegex, FilterKey = "(🇸🇬)|(新加坡)|(Singapore)|(SG)"
+Japan = NameRegex, FilterKey = "(🇯🇵)|(日本)|(Japan)|(JP)"
+Korea = NameRegex, FilterKey = "(🇰🇷)|(韩国)|(Korea)|(KR)"
+United Kingdom = NameRegex, FilterKey = "(🇬🇧)|(英国)|(Kingdom)|(UK)"
+Germany = NameRegex, FilterKey = "(🇩🇪)|(德国)|(Germany)|(DE)"
+Philippine = NameRegex, FilterKey = "(🇵🇭)|(菲律宾)|(Philippine)|(PH)"
+Turkey = NameRegex, FilterKey = "(🇹🇷)|(土耳其)|(Turkey)|(TR)"
+Nigeria = NameRegex, FilterKey = "(🇳🇬)|(尼日利亚)|(Nigeria)|(NG)"
+
+[Proxy Group]
+Proxy = select,All,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Loon.png
+
+# 分流策略组
+Auto = select,HK,US,SG,TW,JP,KR,UK,DE,PH,TR,NG,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/rocket(1).png
+AI = select,Auto,US,JP,SG,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/chatgpt(balck).png
+Crypto = select,Auto,DIRECT,HK,TW,JP,SG,US,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Bitcoin.png
+Twitter = select,Auto,HK,US,TR,NG,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/twitter.png
+Telegram = select,Auto,HK,US,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(blue1).png
+Spotify = select,Auto,PH,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/spotify(green).png
+YouTube = select,Auto,HK,US,TR,NG,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/youtube.png
+Tiktok = select,Auto,HK,US,TW,SG,JP,TR,NG,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/tiktok.png
+Final = select,Auto,Proxy,DIRECT,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/quanqiu(1).png
+
+# 地区策略组
+HK = url-test,Hong Kong,url = http://1.1.1.1/generate_204,interval = 300,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/HongKong.png
+US = url-test,United States,url = http://1.1.1.1/generate_204,interval = 300,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/UnitedStates.png
+TW = url-test,Taiwan,url = http://1.1.1.1/generate_204,interval = 300,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/Taiwan.png
+SG = url-test,Singapore,url = http://1.1.1.1/generate_204,interval = 300,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/Singapore.png
+JP = url-test,Japan,url = http://1.1.1.1/generate_204,interval = 300,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/Japan.png
+KR = url-test,Korea,interval = 300,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/SouthKorea.png
+UK = url-test,United Kingdom,interval = 300,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/UnitedKingdom.png
+DE = url-test,Germany,interval = 300,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/Germany.png
+PH = url-test,Philippine,interval = 600,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/Philippines.png
+TR = url-test,Turkey,interval = 300,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/Turkey.png
+NG = url-test,Nigeria,interval = 600,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag-Icon/Nigeria.png
+
+[Rule]
+# 96110
+DOMAIN-SUFFIX,gjfzpt.cn,REJECT
+DOMAIN-KEYWORD,96110,REJECT
+DOMAIN,prpr.96110.cn.com,DIRECT
+# CN直连
+GEOIP,CN,DIRECT
+# 兜底分流
+FINAL,Final
+
+[Remote Rule]
+https://github.com/Repcz/Tool/raw/X/Loon/Rules/Reject.list, policy=REJECT, tag=Reject, enabled=false
+https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/AI.list, policy=AI, tag=AI, enabled=true
+https://rule.kelee.one/Loon/Binance.lsr, policy=Crypto, tag=Binance, enabled=true
+https://rule.kelee.one/Loon/OKX.lsr, policy=Crypto, tag=OKX, enabled=true
+https://raw.githubusercontent.com/mist-whisper/Loon/master/Lsr/Talkatone/Talkatone.lsr, policy=US, tag=Talkatone, enabled=true
+https://rule.kelee.one/Loon/GoogleVoice.lsr, policy=US, tag=GoogleVoice, enabled=true
+https://rule.kelee.one/Loon/TikTok.lsr, policy=Tiktok, tag=TikTok, enabled=true
+https://rule.kelee.one/Loon/YouTube.lsr, policy=YouTube, tag=YouTube, enabled=true
+https://rule.kelee.one/Loon/Spotify.lsr, policy=Spotify, tag=Spotify, enabled=true
+https://rule.kelee.one/Loon/Telegram.lsr, policy=Telegram, tag=Telegram, enabled=true
+https://rule.kelee.one/Loon/Twitter.lsr, policy=Twitter, tag=Twitter, enabled=true
+https://rule.kelee.one/Loon/Lan.lsr, policy=DIRECT, tag=LAN, enabled=true
+
+[Host]
+# App Store 下载请求解析 金山CDN
+iosapps.itunes.apple.com = iosapps.itunes.apple.com.download.ks-cdn.com
+
+[Rewrite]
+
+
+[Script]
+
+
+[Plugin]
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, tag=HTTPDNS拦截器, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, tag=节点检测工具, enabled=true
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=Auto, enabled=true
+https://github.com/sub-store-org/Sub-Store/raw/master/config/Loon.plugin, policy=Auto, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=Auto, enabled=true
+https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Location.plugin, tag=iRingo Location, enabled=true
+https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Maps.plugin, tag=iRingo Maps, enabled=true
+https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin, tag=iRingo Weather, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx, tag=Spotify去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Spotify_lyrics_translation.lpx, tag=Spotify歌词翻译, enabled=true
+https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, tag=YouTube去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, tag=哔哩哔哩去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, tag=淘宝去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, tag=闲鱼去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, tag=拼多多去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, tag=高德地图去广告, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Weibo_remove_ads.lpx, tag=微博去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, tag=小红书去广告, enabled=true
+https://kelee.one/Tool/Loon/Lpx/MeetYou_remove_ads.lpx, tag=美柚去广告, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/refs/heads/main/Plugin/BaiduNetDisk.lpx, tag=百度网盘, enabled=true
+https://raw.githubusercontent.com/mist-whisper/Loon/refs/heads/master/Lpx/WeRead.lpx, tag=微信读书, enabled=false
+https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx, tag=Testflight地区解锁, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Auto_Join_TF.lpx, policy=Auto, tag=Testflight自动加入, enabled=false
+
+[Mitm]
+ca-p12 = 
+ca-passphrase = 
+skip-server-cert-verify = false
