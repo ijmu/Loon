@@ -2,7 +2,7 @@
 # TG:https://t.me/QVQ_Channel
 # 以 ';' 或 '#' 或 '//' 开头的配置文件行为注释行
 # Loon Version ≥ 3.2.3
-# 最后更新时间: 2025-09-05 19:30
+# 最后更新时间: 2025-09-08 19:30
 # ================
 
 [General]
@@ -66,7 +66,7 @@ Auto = select,HK,US,SG,TW,JP,KR,UK,DE,PH,TR,NG,img-url = https://raw.githubuserc
 AI = select,Auto,US,JP,SG,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/chatgpt(balck).png
 Crypto = select,Auto,DIRECT,HK,TW,JP,SG,US,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Bitcoin.png
 Twitter = select,Auto,HK,US,TR,NG,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/twitter.png
-Telegram = select,Auto,HK,US,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(blue1).png
+Telegram = select,Auto,HK,US,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(1).png
 Spotify = select,Auto,PH,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/spotify(green).png
 YouTube = select,Auto,HK,US,TR,NG,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/youtube.png
 Tiktok = select,Auto,HK,US,TW,SG,JP,TR,NG,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/tiktok.png
@@ -128,7 +128,7 @@ https://github.com/sub-store-org/Sub-Store/raw/master/config/Loon.plugin, policy
 https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=Auto, enabled=true
 https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Location.plugin, tag=iRingo Location, enabled=true
 https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Maps.plugin, tag=iRingo Maps, enabled=true
-https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin, tag=iRingo Weather, enabled=true
+https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin, tag=iRingo Weather, enabled=false
 https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx, tag=Spotify去广告, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Spotify_lyrics_translation.lpx, tag=Spotify歌词翻译, enabled=true
 https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, tag=YouTube去广告, enabled=true
